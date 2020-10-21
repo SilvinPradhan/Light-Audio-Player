@@ -1,0 +1,74 @@
+.app {
+  float: inline-start;
+}
+
+.container {
+  .main-toolbar {
+    justify-content: center;
+    background-color: rgba(169, 184, 180, 0.37);
+    font-family: "Montserrat", sans-serif;
+    .spacer {
+      flex: 1 1 auto;
+    }
+  }
+
+  .media-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .spacer {
+      width: 200%;
+    }
+
+    .buttons {
+    }
+  }
+}
+
+#app-title {
+  color: blueviolet;
+  text-transform: uppercase;
+}
+
+h4 {
+  cursor: pointer;
+}
+
+.header-content {
+  #app-section {
+    margin: 0;
+    color: #0471d6;
+    background-color: rgba(189, 189, 189, 0.411);
+    font-size: 15rem;
+    border-radius: 5px;
+    border: 6px solid whitesmoke;
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+
+  .song-list {
+    height: 240px;
+    overflow: scroll;
+
+    .song-items {
+      background-color: rgba(245, 245, 245, 0.39);
+    }
+  }
+}
+
+hr {
+  border-top: 2px solid rgb(233, 233, 233);
+}
