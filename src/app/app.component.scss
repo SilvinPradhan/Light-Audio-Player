@@ -3,24 +3,36 @@
 }
 
 .container {
+  .title {
+    font-weight: bold;
+  }
   .main-toolbar {
     justify-content: center;
     background-color: rgba(169, 184, 180, 0.37);
     font-family: "Montserrat", sans-serif;
-    .spacer {
-      flex: 1 1 auto;
-    }
   }
 
   .media-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    .spacer {
-      width: 200%;
+
+    .media-controls{
+      ion-icon:hover{
+        cursor: pointer;
+        --ionicon-stroke-width: 16px;
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19),
+          0 6px 20px 0 rgba(0, 0, 0, 0.13);
+      }
     }
 
-    .buttons {
+    .media-action-bar {
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 }
@@ -53,8 +65,8 @@ h4 {
 
       &:hover {
         border-radius: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+          0 6px 20px 0 rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -70,5 +82,13 @@ h4 {
 }
 
 hr {
+  opacity: 0.6;
   border-top: 2px solid rgb(233, 233, 233);
+  justify-content: center;
+}
+
+.time-slider {
+  width: 100% !important;
+  margin-left: 20px;
+  margin-right: 20px;
 }

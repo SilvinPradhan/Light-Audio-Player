@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true" padding>
   <div class="container">
     <mat-toolbar class="main-toolbar">
-      <span>Personal Radio</span>
+      <span class="title">Personal Radio</span>
     </mat-toolbar>
     <div class="header-content">
       <div padding id="app-section" text-center>
@@ -30,15 +30,32 @@
     <div class="spacer"></div>
     <hr />
     <div class="media-footer">
-      <mat-toolbar color="primary">
-        <div class="buttons">
-          <ion-icon name="play-circle-sharp" (click)="play()"></ion-icon>
-          <ion-icon name="pause-circle-sharp" (click)="pause()"></ion-icon>
-          <ion-icon name="stop-circle" (click)="stop()"></ion-icon>
-        </div>
-        <div>
+      <ion-col class="media-controls">
+        <mat-toolbar-row cols="2" class="media-action-bar">
+          <ion-icon
+            name="pause-circle-sharp"
+            color="dark"
+            size="large"
+            (click)="pause()"
+          ></ion-icon>
+          <ion-icon
+            name="play-circle-sharp"
+            color="dark"
+            size="large"
+            (click)="play()"
+          ></ion-icon>
+          <ion-icon
+            name="stop-circle-sharp"
+            color="dark"
+            size="large"
+            (click)="stop()"
+          ></ion-icon>
+        </mat-toolbar-row>
+        <hr />
+        <ion-item>
           <span>{{ currentTime }}</span>
           <input
+            class="time-slider"
             type="range"
             min="0"
             max="{{ duration }}"
@@ -46,20 +63,22 @@
             (input)="setSeekTo($event)"
           />
           <span>{{ duration }}</span>
-        </div>
-
-        <div>
-          <span class="spacer"><ion-icon name="volume-high"></ion-icon></span>
+        </ion-item>
+        <hr />
+        <ion-item>
+          <ion-icon slot="start" name="volume-low" color="dark"></ion-icon>
           <input
             type="range"
+            class="time-slider"
             min="0"
             max="1"
             step="0.01"
-            value="0.5"
+            value="0.3"
             (input)="setVolume($event)"
           />
-        </div>
-      </mat-toolbar>
+          <ion-icon slot="end" name="volume-medium" color="dark"></ion-icon>
+        </ion-item>
+      </ion-col>
     </div>
   </div>
 </ion-content>
