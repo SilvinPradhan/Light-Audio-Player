@@ -3,7 +3,7 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyAAb_mQRTHwkuyOeumpuRSE-3N_P1wbsgU',
+    apiKey: 'Your_public_key',
     authDomain: 'pwa-apps-6ac75.firebaseapp.com',
     databaseURL: 'https://pwa-apps-6ac75.firebaseio.com',
     projectId: 'pwa-apps-6ac75',
