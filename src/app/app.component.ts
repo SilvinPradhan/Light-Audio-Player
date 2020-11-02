@@ -47,6 +47,12 @@ export class AppComponent {
     { url: './assets/sound3.mp3', name: 'Test 5 Song', id: 'current5' },
 
     { url: './assets/sound3.mp3', name: 'Test 6 Song', id: 'current6' },
+    {
+      url:
+        'http://conferencenow.info/audio/httg/201030-B%c3%81N%20HAY%20GI%e1%bb%ae-MS%20Tr%c3%a2%cc%80nNguy%c3%aanBa%cc%89o.mp3',
+      name: 'Test 7 song',
+      id: 'current7',
+    },
   ];
 
   currentTime = '00:00:00';
