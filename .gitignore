@@ -16,10 +16,16 @@ speed-measure-plugin*.json
 
 # IDEs and editors
 /.idea
+/.ionic
 .project
 .classpath
+/.sourcemaps
+/.versions
 .c9/
+/www
+/platforms
 *.launch
+/plugins
 .settings/
 *.sublime-workspace
 
@@ -44,3 +50,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+*.log
+log.txt
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+*.sublime-project

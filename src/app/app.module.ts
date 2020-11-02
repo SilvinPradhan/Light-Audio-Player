@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon'
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
-import {MatToolbarModule} from '@angular/material/toolbar'
-import {MatSliderModule} from '@angular/material/slider'
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicModule } from '@ionic/angular';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     MatListModule,
@@ -20,13 +19,12 @@ import { IonicModule } from '@ionic/angular';
     MatToolbarModule,
     MatIconModule,
     MatSliderModule,
-    IonicModule.forRoot()
+    AngularFireModule.initializeApp(environment.firebase),
+    IonicModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  ngOnInit() : void {
-
-  }
+  ngOnInit(): void {}
 }

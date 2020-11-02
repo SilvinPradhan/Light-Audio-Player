@@ -8,6 +8,10 @@ import * as moment from 'moment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  constructor() {}
+
+  ngOnInit() {}
+
   audioObj = new Audio();
   audioEvents = [
     'ended',
@@ -25,22 +29,30 @@ export class AppComponent {
       url:
         'http://conferencenow.info/audio/TiengNoiQueHuong/200917-Pho%cc%89ngV%c3%a2%cc%81nMSKi%c3%aa%cc%81n.mp3',
       name: 'sample',
+      id: 'current1',
     },
 
     { url: './assets/sound1.mp3', name: 'Test 2 Song' },
+    {
+      url:
+        'https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/Alesis%20FX/26[kb]alesis-d4fx-00.wav.mp3',
+      name: 'Test 2 Song',
+      id: 'current2',
+    },
 
-    { url: './assets/sound3.mp3', name: 'Test 3 Song' },
+    { url: './assets/sound3.mp3', name: 'Test 3 Song', id: 'current3' },
 
-    { url: './assets/sound3.mp3', name: 'Test 4 Song' },
+    { url: './assets/sound3.mp3', name: 'Test 4 Song', id: 'current4' },
 
-    { url: './assets/sound3.mp3', name: 'Test 5 Song' },
+    { url: './assets/sound3.mp3', name: 'Test 5 Song', id: 'current5' },
 
-    { url: './assets/sound3.mp3', name: 'Test 6 Song' },
+    { url: './assets/sound3.mp3', name: 'Test 6 Song', id: 'current6' },
   ];
 
   currentTime = '00:00:00';
   duration = '00:00:00';
   seek = 0;
+  repeat = false;
 
   streamObserver(url) {
     return new Observable((observer) => {
@@ -103,6 +115,16 @@ export class AppComponent {
     this.audioObj.pause();
     this.audioObj.currentTime = 0;
     console.log('Clicked Stop button');
+  }
+
+  repeatAudio() {
+    while (this.audioObj.currentTime) {
+      if ((this.currentTime = this.timeFormat(this.audioObj.currentTime))) {
+        this.repeat = !this.repeat;
+        this.audioObj.currentTime = 0;
+        this.audioObj.play();
+      }
+    }
   }
 
   timeFormat(time, format = 'HH:mm:ss') {

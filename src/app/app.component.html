@@ -21,8 +21,9 @@
             *ngFor="let file of files"
             (click)="openFile(file.url)"
           >
+            <!-- routerLink="{`${file.id}`}" -->
             <mat-icon color="primary" mat-list-icon>music_note</mat-icon>
-            <h4 mat-line (click)="openFile(file.url)">{{ file.name }}</h4>
+            <a mat-line (click)="openFile(file.url)">{{ file.name }}</a>
           </mat-list-item>
         </div>
       </mat-list>
@@ -50,6 +51,13 @@
             size="large"
             (click)="stop()"
           ></ion-icon>
+          <ion-icon
+            name="repeat-sharp"
+            color="dark"
+            size="large"
+            (click)="repeatAudio()"
+          >
+          </ion-icon>
         </mat-toolbar-row>
         <hr />
         <ion-item>
@@ -58,7 +66,7 @@
             class="time-slider"
             type="range"
             min="0"
-            max="{{ duration }}"
+            [max]="duration"
             [value]="seek"
             (input)="setSeekTo($event)"
           />
