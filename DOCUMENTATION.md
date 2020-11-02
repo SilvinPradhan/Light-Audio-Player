@@ -23,11 +23,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     - Then it redirect's you to a page for selecting the account of your choice.
   
 3. firebase init
- ######## #### ########  ######## ########     ###     ######  ########
- ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
- ######    ##  ########  ######   ########  #########  ######  ######
- ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
- ##       #### ##     ## ######## ########  ##     ##  ######  ########
+  
   You're about to initialize a Firebase project in this directory:
    
 4. It will ask you some major questions: 
