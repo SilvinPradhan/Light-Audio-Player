@@ -6,6 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 You can use any code editors such as VSCode, Atom, Sublime Text, Notepad++, or any other IDEs. However, VSCode is mostly preferred.
 
+### If you are willing to clone the repo and try it out for yourself.
+
+First: Open up a fresh Vscode window.
+Second: Open up your terminal and TYPE: git clone https://github.com/SilvinPradhan/Light-Audio-Player.git
+
+## Install Node_Modules
+
+Do not forget to run "npm install" once you have cloned the repo. It will be necessary for updating of package-lock.json and reinstalling of node_modules.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -16,6 +25,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 # Methods For Deployment with Firebase
 
+You can follow up the steps from https://firebase.google.com/docs/cli
+
 1.  npm install -g firebase-tools
 
 2.  firebase login
@@ -24,15 +35,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     - Then it redirect's you to a page for selecting the account of your choice.
 
 3.  firebase init
+    At the end of initialization, Firebase automatically creates the following two files at the root of your local app directory:
+    - A firebase.json configuration file that lists your project configuration.
+    - A .firebaserc file that stores your project aliases.
 
 You're about to initialize a Firebase project in this directory:
 
-4. It will ask you some major questions:
+1. It will ask you some major questions:
    - Are you ready to proceed? Yes
    - Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. On your keyboard move down to Hosting or any other services like Firestore, Database, Authentication, if needed.
      Else SELECT: Hosting: Configure and deploy Firebase Hosting sites
      And press Space bar to select the feature.
-5. === Project Setup ===
+2. === Project Setup ===
 
 - First, let's associate this project directory with a Firebase project. You can create multiple project aliases by running firebase use --add, but for now we'll just set up a default project.
 - Please select an option: Use an existing project ? Select a default Firebase project for this directory: Here Select your Firebase Project that you have registered.
