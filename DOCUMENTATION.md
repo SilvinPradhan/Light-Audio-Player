@@ -27,6 +27,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 You can follow up the steps from https://firebase.google.com/docs/cli
 
+                    OR
+
 1.  npm install -g firebase-tools
 
 2.  firebase login
