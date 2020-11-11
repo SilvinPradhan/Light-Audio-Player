@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar class="header">
     <ion-title>Online Audio Player</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,7 +28,15 @@
         </div>
       </mat-list>
     </div>
-    <div class="spacer"></div>
+    <ion-item class="file-selector">
+      <ion-icon name="cloud-upload-sharp"></ion-icon>
+      <input
+        type="file"
+        name="inputFile"
+        (change)="chooseFile($event)"
+        required
+      />
+    </ion-item>
     <hr />
     <div class="media-footer">
       <ion-col class="media-controls">

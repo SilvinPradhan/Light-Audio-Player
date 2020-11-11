@@ -2,6 +2,19 @@
   float: inline-start;
 }
 
+.header {
+  --background: #4d4deb;
+  --color: #fff;
+  --overflow: hidden;
+  text-transform: capitalize;
+
+  ion-title {
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+  }
+}
+
 .container {
   .title {
     font-weight: bold;
@@ -77,7 +90,14 @@ h4 {
     cursor: pointer;
 
     .song-items {
-      background-color: rgba(245, 245, 245, 0.39);
+      background-color: rgba(241, 241, 241, 0.39);
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.19),
+        0 2px 10px 0 rgba(0, 0, 0, 0.13);
+
+      &:hover {
+        box-shadow: 2px 5px 4px 0 rgba(0, 0, 0, 0.1),
+          0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      }
     }
   }
 }
@@ -92,4 +112,21 @@ hr {
   width: 100% !important;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+mat-icon {
+  font-size: 30px;
+}
+
+ion-toolbar {
+  justify-content: center;
+  display: flex;
+  left: 10px;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.file-selector {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as moment from 'moment';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +13,26 @@ import * as moment from 'moment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private db: AngularFirestore,
+    private store: AngularFireStorage
+  ) {}
+
+  selectedFile: any;
+  chooseFile(event) {
+    this.selectedFile = event.target.files;
+  }
+
+  async uploadFile(id, file): Promise<any> {
+    if (file && file.length) {
+      try {
+        const task = await this.store.ref('/audios').child(id).put(file[0]);
+        return this.store.ref(`audios/${id}`).getDownloadURL().toPromise();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
 
   ngOnInit() {}
 
