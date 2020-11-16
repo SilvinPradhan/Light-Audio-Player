@@ -6,6 +6,7 @@ import {
   AngularFirestoreCollection,
 } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
   selector: 'app-root',
