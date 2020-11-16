@@ -31,3 +31,31 @@ The performance benefits of installing all our Javascript and CSS bundles on the
    - The application scaffolded is almost identical to an application without PWA support. Let's see what this flag includes, in case you need to upgrade an application manually.
    - We can see that the @angular/service-worker package was added to package.json. Also, there is a new flag serviceWorker set to true in the CLI configuration file angular.json:
      ![image]
+
+**NOTE**
+
+What does the "serviceWorker" flag do?
+This flag will cause the production build to include a couple of extra files in the output dist folder.
+
+- The Angular Service Worker file ngsw-worker.js
+- The runtime configuration of the Angular Service Worker ngsw.json
+
+**Note** ngsw stand for "Angular Service Worker".
+
+What does the ServiceWorkerModule do?
+![image]
+
+This module provides a couple of injectable services:
+
+- SwUpdate for managing application version updates
+- SwPush for doing server Web Push notifications
+
+# The Build Configuration file ngsw-config.json
+
+The CLI has also added a new configuration file called ngsw-config.json, which configures the Angular Service Worker runtime behavior, and the generated file comes with some intelligent defaults.
+
+Here is what the file looks like:
+![image]
+
+**Important!**
+This file contains the default caching behavior or the Angular Service Worker, which targets the application static asset files: the index.html, the CSS and Javascript bundles.
